@@ -51,6 +51,7 @@
                                 <rect key="frame" x="35" y="378.5" width="147.5" height="30"/>
                                 <color key="backgroundColor" red="0.27075945759999998" green="0.38987238870000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="PLa-c4-XoN"/>
                                     <constraint firstAttribute="height" constant="30" id="hV2-fY-kzl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -58,7 +59,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="Recolor:" destination="9cV-dj-X6i" eventType="touchUpInside" id="vvP-aZ-NDv"/>
+                                    <action selector="recolor:" destination="9cV-dj-X6i" eventType="touchUpInside" id="PlI-9p-21I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKF-KB-qCF">
