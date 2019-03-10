@@ -14,9 +14,13 @@
 		BF736F1D223469D30081E726 /* TwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF736F1C223469D30081E726 /* TwoController.swift */; };
 		BF76F6B0223578B800EA9D89 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF76F6AF223578B700EA9D89 /* Default-568h@2x.png */; };
 		BF76F6B22235823700EA9D89 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF76F6B12235823700EA9D89 /* Storyboard.storyboard */; };
+		E927328346B9CDA112FC4631 /* Pods_MyOneProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBFFC4BD20BEBC706CBC694 /* Pods_MyOneProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BBFFC4BD20BEBC706CBC694 /* Pods_MyOneProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyOneProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		216E0A3CF666EC51D46FAA47 /* Pods-MyOneProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyOneProject.debug.xcconfig"; path = "Target Support Files/Pods-MyOneProject/Pods-MyOneProject.debug.xcconfig"; sourceTree = "<group>"; };
+		24FD4590FDABC8BD95E19CFC /* Pods-MyOneProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyOneProject.release.xcconfig"; path = "Target Support Files/Pods-MyOneProject/Pods-MyOneProject.release.xcconfig"; sourceTree = "<group>"; };
 		BF736F032231C1000081E726 /* MyOneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyOneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF736F062231C1000081E726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF736F082231C1000081E726 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,12 +38,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E927328346B9CDA112FC4631 /* Pods_MyOneProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		846078B1F4302C6FCA3795E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				216E0A3CF666EC51D46FAA47 /* Pods-MyOneProject.debug.xcconfig */,
+				24FD4590FDABC8BD95E19CFC /* Pods-MyOneProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BF736EFA2231C1000081E726 = {
 			isa = PBXGroup;
 			children = (
@@ -47,6 +62,7 @@
 				BF736F052231C1000081E726 /* MyOneProject */,
 				BF736F042231C1000081E726 /* Products */,
 				BF736F182231C1840081E726 /* Frameworks */,
+				846078B1F4302C6FCA3795E8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +91,7 @@
 		BF736F182231C1840081E726 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1BBFFC4BD20BEBC706CBC694 /* Pods_MyOneProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF736F152231C1040081E726 /* Build configuration list for PBXNativeTarget "MyOneProject" */;
 			buildPhases = (
+				A9EDCAAF08A1068DEECE8F28 /* [CP] Check Pods Manifest.lock */,
 				BF736EFF2231C1000081E726 /* Sources */,
 				BF736F002231C1000081E726 /* Frameworks */,
 				BF736F012231C1000081E726 /* Resources */,
+				09B37A61D002E01F60601981 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +202,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09B37A61D002E01F60601981 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyOneProject/Pods-MyOneProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyOneProject/Pods-MyOneProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9EDCAAF08A1068DEECE8F28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyOneProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF736EFF2231C1000081E726 /* Sources */ = {
@@ -327,6 +393,7 @@
 		};
 		BF736F162231C1040081E726 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 216E0A3CF666EC51D46FAA47 /* Pods-MyOneProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -345,6 +412,7 @@
 		};
 		BF736F172231C1040081E726 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24FD4590FDABC8BD95E19CFC /* Pods-MyOneProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

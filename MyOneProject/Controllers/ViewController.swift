@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -25,13 +26,35 @@ class ViewController: UIViewController {
         //применение рандомного цвета
         self.view.backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
+    @IBAction func json(_ sender: UIButton) {
+        //ссылка на сервер
+        guard let url = URL.init(string: "http://127.0.0.1:8000/auth") else {fatalError("Error url")}
+        //параметры  которые мы отправляем (берем их из наших полей)
+        let requestJSON = ["username":self.Login.text!,"password":self.Password.text!]
+        //отправляем post запрос и получает response
+        Alamofire.request(url, method: .post, parameters: requestJSON).responseJSON { (response) in
+            //сохраняем response в константу и далее работаем с ней
+            if let json = response.data {
+                //print("JSON: \(json)")
+                //извлекаем данные и загоняем их в массив
+                if let j = try? JSONSerialization.jsonObject(with: json) as? NSDictionary  {
+                    if let answer = j?["answer"] as? NSDictionary {
+                        if let status = answer["status"] as? String, let message = answer["message"] as? String {
+                            //вывод
+                            print("status: \(status), message: \(message)")
+                        }
+                    }
+                }
+            }
+        }
+    }
     // переход на второй контроллер с передачей цвета
     @IBAction func auth(_ sender: UIButton) {
         //проверка инициализированного контроллера
         if let vc = UIStoryboard.init(name: "Storyboard", bundle: nil).instantiateViewController(withIdentifier: "two") as? TwoController {
             //передача цвета на второй контроллер
             vc.colorBG = self.view.backgroundColor
-            //добавление анимации перехода на второй контроллер
+           //добавление анимации перехода на второй контроллер
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
