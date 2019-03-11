@@ -94,6 +94,12 @@
                                     <action selector="json:" destination="9cV-dj-X6i" eventType="touchUpInside" id="cHY-ml-ZoR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycg-2r-Fb0">
+                                <rect key="frame" x="35" y="492" width="305" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -102,8 +108,12 @@
                             <constraint firstItem="GKF-KB-qCF" firstAttribute="leading" secondItem="prr-dE-6Hm" secondAttribute="trailing" constant="10" id="9N0-SU-C26"/>
                             <constraint firstItem="GKF-KB-qCF" firstAttribute="top" secondItem="prr-dE-6Hm" secondAttribute="top" id="ETx-fc-Gfn"/>
                             <constraint firstItem="cLc-LP-qY7" firstAttribute="leading" secondItem="prr-dE-6Hm" secondAttribute="leading" id="Epz-EK-BwP"/>
+                            <constraint firstItem="Ycg-2r-Fb0" firstAttribute="height" secondItem="Ayr-cM-yIX" secondAttribute="height" id="Fzz-HT-Scl"/>
                             <constraint firstItem="wl8-z9-5iy" firstAttribute="centerY" secondItem="6tZ-0c-iGn" secondAttribute="centerY" id="Ibi-6t-rGt"/>
                             <constraint firstItem="prr-dE-6Hm" firstAttribute="top" secondItem="wl8-z9-5iy" secondAttribute="bottom" constant="20" id="JII-zt-ceh"/>
+                            <constraint firstItem="Ycg-2r-Fb0" firstAttribute="top" secondItem="Ayr-cM-yIX" secondAttribute="bottom" constant="8" id="N9f-Nd-o74"/>
+                            <constraint firstItem="Ycg-2r-Fb0" firstAttribute="leading" secondItem="Ayr-cM-yIX" secondAttribute="leading" id="Pfy-ol-MY6"/>
+                            <constraint firstItem="Ycg-2r-Fb0" firstAttribute="trailing" secondItem="Ayr-cM-yIX" secondAttribute="trailing" id="TFK-I7-ulU"/>
                             <constraint firstItem="wl8-z9-5iy" firstAttribute="leading" secondItem="6tZ-0c-iGn" secondAttribute="leading" constant="35" id="WAo-qx-VOG"/>
                             <constraint firstItem="cLc-LP-qY7" firstAttribute="top" secondItem="prr-dE-6Hm" secondAttribute="bottom" constant="7.5" id="cPP-Bi-plX"/>
                             <constraint firstItem="wl8-z9-5iy" firstAttribute="centerX" secondItem="6tZ-0c-iGn" secondAttribute="centerX" id="dfw-LP-F2F"/>
@@ -124,6 +134,7 @@
                     <connections>
                         <outlet property="Login" destination="ceu-5Z-CXY" id="E7H-EQ-9kG"/>
                         <outlet property="Password" destination="wl8-z9-5iy" id="7Hj-yJ-R2T"/>
+                        <outlet property="label" destination="Ycg-2r-Fb0" id="EIK-9v-wcX"/>
                         <outlet property="view" destination="prr-dE-6Hm" id="LcC-Oc-m1f"/>
                     </connections>
                 </viewController>

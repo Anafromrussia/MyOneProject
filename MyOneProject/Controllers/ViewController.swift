@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     //регистрация полей
     @IBOutlet weak var Login: UITextField!
     @IBOutlet weak var Password: UITextField!
+    @IBOutlet weak var label: UILabel!
     
     //ф-ция смены цветов
     @IBAction func recolor(_ sender: UIButton) {
@@ -40,8 +41,10 @@ class ViewController: UIViewController {
                 if let j = try? JSONSerialization.jsonObject(with: json) as? NSDictionary  {
                     if let answer = j?["answer"] as? NSDictionary {
                         if let status = answer["status"] as? String, let message = answer["message"] as? String {
-                            //вывод
+                            //вывод в консоль
                             print("status: \(status), message: \(message)")
+                            //вывод в label
+                            self.label.text = "status: " + "\(status) \n" + "message:" + "\(message)"
                         }
                     }
                 }
